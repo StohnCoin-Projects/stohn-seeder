@@ -1,8 +1,8 @@
-# generic-seeder
+# stohn-seeder
 
 ### v1.1.0
 
-The generic-seeder is a blockchain network crawler that maintains a list of IP addresses of the most reliable nodes on the network and shares those node IPs via DNS request to anyone requiring an entry point into the decentralized network. Choose between two main usage modes which consist of locally running a lightweight DNS server or feeding the data into a [Cloudflare](https://www.cloudflare.com/) account in order to respond to DNS seed requests. If you just want to crawl a network to get a list of the connectable nodes, without worrying about the DNS setup, you can do that too. The seeder app is compatible with almost any bitcoin-based blockchain network and can be configured in a short amount of time by filling out a small handful of parameters in the configuration file with the data from your coin's network. Tested to work with Ubuntu 18.04+ and Debian 8.x+ but it should work fine on any Linux installation, although package names and install steps may differ.
+The stohn-seeder is a blockchain network crawler that maintains a list of IP addresses of the most reliable nodes on the network and shares those node IPs via DNS request to anyone requiring an entry point into the decentralized network. Choose between two main usage modes which consist of locally running a lightweight DNS server or feeding the data into a [Cloudflare](https://www.cloudflare.com/) account in order to respond to DNS seed requests. If you just want to crawl a network to get a list of the connectable nodes, without worrying about the DNS setup, you can do that too. The seeder app is compatible with almost any bitcoin-based blockchain network and can be configured in a short amount of time by filling out a small handful of parameters in the configuration file with the data from your coin's network. Tested to work with Ubuntu 18.04+ and Debian 8.x+ but it should work fine on any Linux installation, although package names and install steps may differ.
 
 #### Special Thanks
 - **[Pieter Wuille (aka sipa)](https://github.com/sipa):** for creating and continuing to support the original [bitcoin-seeder](https://github.com/sipa/bitcoin-seeder)
@@ -52,13 +52,13 @@ sudo apt-get install git build-essential libboost-all-dev libssl-dev libcurl4-op
 ### Step 2 - Download Source Code
 
 ```
-git clone https://github.com/team-exor/generic-seeder.git
+git clone https://github.com/StohnIO/stohn-seeder.git
 ```
 
 ### Step 3 - Navigate to Source Directory
 
 ```
-cd generic-seeder
+cd stohn-seeder
 ```
 
 ### Step 4 - Configure Seeder Settings
@@ -157,7 +157,7 @@ Once the `setcap` command is complete, you can start the seeder app as per norma
 
 ```
 sudo iptables -t nat -A PREROUTING -p udp --dport 53 -j REDIRECT --to-port 15353
-``` 
+```
 
 After adding the new iptables rule, the seeder app can be called without `sudo`, but you must always specify the redirected port using the `-p` argument:
 
