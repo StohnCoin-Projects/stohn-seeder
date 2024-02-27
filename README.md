@@ -7,6 +7,8 @@ The stohn-seeder is a blockchain network crawler that maintains a list of IP add
 #### Special Thanks
 - **[Pieter Wuille (aka sipa)](https://github.com/sipa):** for creating and continuing to support the original [bitcoin-seeder](https://github.com/sipa/bitcoin-seeder)
 - **[The Litecoin Cash development team](https://github.com/litecoincash-project):** for developing the original implementation of Cloudflare api mode
+- **[Joe Uhren (aka joeuhren)](https://github.com/joeuhren):** for developing the [generic-seeder](https://github.com/team-exor/generic-seeder)
+
 
 ## Table of Contents
 
